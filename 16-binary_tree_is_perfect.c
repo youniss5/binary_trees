@@ -50,7 +50,7 @@ int is_perfect_recur(const binary_tree_t *tree,
 		size_t leaf_dep, size_t level)
 {
 	if (is_leaf(tree))
-		return (level == leaf_depth ? 1 : 0);
+		return (level == leaf_dep ? 1 : 0);
 	if (tree->left == NULL || tree->right == NULL)
 		return (0);
 	return (is_perfect_recur(tree->left, leaf_dep, level + 1) &&
